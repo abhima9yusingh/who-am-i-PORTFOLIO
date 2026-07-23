@@ -1,0 +1,90 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #e5e5fd;
+    min-height: 100vh;
+    border: 10px solid #000003;
+}
+
+.content{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.upper-section{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-section h1{
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.upper-section h4{
+    font-size: 25px;
+    text-align: end;
+}
+
+
+
+.image_container{
+    border-radius: 35%;
+    overflow: hidden;
+}
+
+.image_container,img{
+    width: 300px;
+    height: auto;
+}
+
+
+.carousel{
+    margin: 100px auto;
+    width: 100%;
+    border: 5px solid #000003;
+    display: flex;
+    overflow-x: auto;
+    gap: 1em;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel:hover .group{
+    animation-play-state: paused;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 8s infinite linear;
+    padding-right: 1em;
+}
+
+#card1, #card2, #card3, #card4, #card5, #card6{
+    flex: 0 0 5em;
+    height: 7em;
+    padding: 1em;
+    background-color: rgb(155, 190, 255);
+    font-size: 3em;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+
+   @keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+   } 
